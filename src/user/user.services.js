@@ -10,7 +10,13 @@ const findByEmail = async (data) => {
   return user;
 };
 
+const findById = async (id) => {
+  const user = await User.findById(id).select("-password");
+  return user;
+};
+
 export default {
   createUser,
   findByEmail,
+  findById,
 };

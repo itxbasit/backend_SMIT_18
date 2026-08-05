@@ -1,10 +1,10 @@
 import { Router } from "express";
-import fileSystem from './fileSystem/index.js'
-import user from './user/users.route.js'
+import fileSystem from "./src/fileSystem/index.js";
+import User from "./src/user/users.route.js";
 
 const router = Router();
 
 router.use("/file", fileSystem);
-router.use("/user", user);
+router.use("/user", User);
 
 export default router;
